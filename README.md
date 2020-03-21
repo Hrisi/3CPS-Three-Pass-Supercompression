@@ -9,9 +9,9 @@ A primary feature of NVIDIA Texture Tools is the DXT compression. Our contributi
 How to build (Linux/OSX):
 Use cmake and the provided configure script:
 
-$ ./configure
-$ make
-$ sudo make install
+$./configure
+$make
+$sudo make install
 
 How to run it:
 nvcompress -bc1 'out'.png 'in'.dss
