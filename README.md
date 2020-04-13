@@ -13,7 +13,7 @@ $ docker build -t 3cps-nvidia-texture-tools:latest .
 ```
 
 ## Docker Run
-Always run the software from the root folder of the git repository.
+Always run the software from the root folder of the `git` repository.
 
 To run the software for all examplar textures in `textures/` folder:
 ```
