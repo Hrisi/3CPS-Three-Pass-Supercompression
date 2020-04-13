@@ -2,10 +2,10 @@
 
 set -e
 
-BASE=/nvidia-texture-tools/data
+BASE=/nvidia-texture-tools/data/textures
 
 DATA=${1:-$(cd $BASE && ls *.{jpg,png} || true)}
 
 for f in $DATA; do
-  nvcompress -bc1 $BASE/$f $BASE/${f}.dds 
+  python /nvidia-texture-tools/sources/3cps_analysis.py -i $f -f 1 
 done
