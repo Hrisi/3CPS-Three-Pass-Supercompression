@@ -15,12 +15,12 @@ $ docker build -t 3cps-nvidia-texture-tools:latest .
 
 To run the software for all examplar textures in `textures/` folder:
 ```
-$ docker run -ti -v $(pwd)/textures:/nvidia-texture-tools/data --rm 3cps-nvidia-texture-tool
+$ docker run -ti -v $(pwd)/textures:/nvidia-texture-tools/data --rm 3cps-nvidia-texture-tools
 ```
 
 To run the software for a particular texture `t.jpg` from the `textures/` folder:
 ```
-$ docker run -ti -v $(pwd)/textures:/nvidia-texture-tools/data --rm 3cps-nvidia-texture-tool t.jpg
+$ docker run -ti -v $(pwd)/textures:/nvidia-texture-tools/data --rm 3cps-nvidia-texture-tools t.jpg
 ```
 
 Moreover, to compare the re-compression step from our 3CPS solution to the original DXT1 compression, build the Docker image in the folder `base-nvidia-texture-tools/`. The build will clone the original nvidia-texture-tools repository and install the software. Then, run the Docker container on all examplar textures or on a particular texture.
