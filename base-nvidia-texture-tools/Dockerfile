@@ -11,18 +11,19 @@ RUN apt-get update && \
   rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN cd / && \
-  mkdir nvidia-texture-tools && \
-  git clone https://github.com/castano/nvidia-texture-tools.git /nvidia-texture-tools/sources && \
-  cd /nvidia-texture-tools/sources && \
+  mkdir nvidia-texture-tool && \
+  git clone https://github.com/castano/nvidia-texture-tools.git /nvidia-texture-tool/sources && \
+  cd /nvidia-texture-tool/sources && \
+  git checkout b45560cfc4684fec8a79d812a20780e5d79df9b3 && \
   mkdir build && \
   cd build && \
   cmake ..  && \
   make && \
   make install
 
-ADD ./runner.sh /nvidia-texture-tools/sources
+ADD ./runner.sh /nvidia-texture-tool/sources
 
-WORKDIR /nvidia-texture-tools
-VOLUME /nvidia-texture-tools/data
-ENTRYPOINT ["/nvidia-texture-tools/sources/runner.sh"]
+WORKDIR /nvidia-texture-tool
+VOLUME /nvidia-texture-tool/data
+ENTRYPOINT ["/nvidia-texture-tool/sources/runner.sh"]
 CMD []
