@@ -1,8 +1,9 @@
 # 3CPS-Three-Pass-Supercompression
-This repository contains the code for performing the DXT1 re-compression step of the proposed 3CPS supercompression algorithm.
+This repository contains the code related to the 3CPS supercompression proposal, which is introduced in
+Hristina Hristova, Gwendal Simon, Stefano Petrangeli, and Vishy Swaminathan. ''**3CPS: A Novel Supercompression for the Delivery of 3D Object Textures**, in ACM Multimedia Systems (MMSys) Conference, 2020.
 
-The re-compression step, based on the Maximum Difference Cut, is implemented in the NVIDIA Texture Tools (repository: https://github.com/castano/nvidia-texture-tools).
-A primary feature of NVIDIA Texture Tools is the DXT compression. Our solution contributes to the `nvtt` library, optimizing the `CompressorDXT1` functionaly (including functions for performing DXT1 texture compression).
+It performs a three-pass compression based on DXT1. The re-compression step, based on the Maximum Difference Cut, is implemented in the NVIDIA Texture Tools (repository: https://github.com/castano/nvidia-texture-tools).
+A primary feature of NVIDIA Texture Tools is the DXT compression. Our solution contributes to the `nvtt` library, optimizing the `CompressorDXT1` functionality (including functions for performing DXT1 texture compression).
 
 To install and run our 3CPS solution, you can use the support for building Docker image and running encoding experiments in a Docker container. The folder `textures/` contains uncompressed examplar textures.
 
