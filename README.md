@@ -27,4 +27,4 @@ $ docker run -ti -v $(pwd)/experimental_data:/nvidia-texture-tools/data --rm 3cp
 
 Moreover, to compare the re-compression step from our 3CPS solution to the original DXT1 compression, build the Docker image in the folder `base-nvidia-texture-tools/`. The build will clone the original nvidia-texture-tools repository and install the software. Then, run the Docker container for all examplar textures or a particular texture.
 
-The compressed images are stored in folders `experimental_data/3cps/` (for the 3CPS supercompression method) and `experimental_data/dxt1/` (for DXT1 method from the NVIDIA Texture Tools).
+The compressed images are stored in folders `experimental_data/3cps/` (for the 3CPS supercompression method) and `experimental_data/dxt1/` (for the DXT1 method from the NVIDIA Texture Tools).
